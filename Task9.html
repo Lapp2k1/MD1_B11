@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = +prompt("Nhập số a:");
+      let b = +prompt("Nhập số b:");
+      let c = +prompt("Nhập số c:");
+
+      let max = a > b ? (a > c ? a : c) : b > c ? b : c;
+      let min = a < b ? (a < c ? a : c) : b < c ? b : c;
+
+      console.log("Max là " + max);
+      console.log("Min là " + min);
+    </script>
+  </body>
+</html>

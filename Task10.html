@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let date = +prompt("Nhập ngày sinh:");
+      let month = +prompt("Nhập tháng sinh:");
+      let Zodiac;
+
+      switch (month) {
+        case 1:
+          Zodiac = date <= 19 ? "Cung Ma Kết" : "Cung Bảo Bình";
+          break;
+        case 2:
+          Zodiac = date <= 18 ? "Cung Bảo Bình" : "Cung Song Ngư";
+          break;
+        case 3:
+          Zodiac = date <= 20 ? "Cung Song Ngư" : "Cung Bạch Dương";
+          break;
+        case 4:
+          Zodiac = date <= 20 ? "Cung Bạch Dương" : "Cung Kim Ngưu";
+          break;
+        case 5:
+          Zodiac = date <= 21 ? "Cung Kim Ngưu" : "Cung Song Tử";
+          break;
+        case 6:
+          Zodiac = date <= 21 ? "Cung Song Tử" : "Cung Cự Giải";
+          break;
+        case 7:
+          Zodiac = date <= 22 ? "Cung Cự Giải" : "Cung Sư Tử";
+          break;
+        case 8:
+          Zodiac = date <= 23 ? "Cung Sư Tử" : "Cung Xử Nữ";
+          break;
+        case 9:
+          Zodiac = date <= 22 ? "Cung Xử Nữ" : "Cung Thiên Bình";
+          break;
+        case 10:
+          Zodiac = date <= 23 ? "Cung Thiên Bình" : "Cung Bọ Cạp";
+          break;
+        case 11:
+          Zodiac = date <= 22 ? "Cung Bọ Cạp" : "Cung Nhân Mã";
+          break;
+        case 12:
+          Zodiac = date <= 21 ? "Cung Nhân Mã" : "Cung Ma Kết";
+          break;
+        default:
+          alert("Tháng không hợp lệ. Vui lòng nhập từ 1 đến 12.");
+          break;
+      }
+
+      if (Zodiac !== undefined) {
+        alert("Bạn thuộc " + Zodiac + ".");
+      }
+    </script>
+  </body>
+</html>

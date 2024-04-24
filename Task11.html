@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("Bài 1:");
+      let age = prompt("Nhập số tuổi của bạn:");
+      age = parseInt(age);
+
+      if (age >= 18) {
+        document.write("Bạn trên 18 tuổi.");
+      } else {
+        document.write("Bạn chưa đủ 18 tuổi!");
+      }
+      document.write("<hr/><br/>");
+
+      document.write("Bài 2:");
+      let hour = prompt("Nhập số giờ trong ngày:");
+      hour = parseInt(hour);
+
+      if (hour < 18) {
+        document.write("Good day");
+      } else {
+        document.write("Good evening");
+      }
+      document.write("<hr/><br/>");
+
+      document.write("Bài 3:");
+      let hour1 = prompt("Nhập số giờ trong ngày:");
+      hour1 = parseInt(hour1);
+
+      if (hour1 < 10) {
+        document.write("Good morning");
+      } else if (hour1 < 20) {
+        document.write("Good day");
+      } else {
+        document.write("Good evening");
+      }
+      document.write("<hr/><br/>");
+
+      document.write("Bài 4:");
+      let number = prompt("Nhập một số:");
+      number = parseInt(number);
+
+      if (number % 2 === 0) {
+        document.write("Số chẵn");
+      } else {
+        document.write("Số lẻ");
+      }
+      document.write("<hr/><br/>");
+
+      document.write("Bài 5:");
+      let number1 = prompt("Nhập một số:");
+      number1 = parseInt(number1);
+
+      switch (number1 % 2) {
+        case 0:
+          document.write("Số chẵn");
+          break;
+        default:
+          document.write("Số lẻ");
+      }
+      document.write("<hr/><br/>");
+
+      document.write("Bài 6:");
+      let color = prompt("Nhập màu:");
+
+      switch (color) {
+        case "xanh":
+        case "đỏ":
+        case "vàng":
+          document.write("Màu bạn nhập là: " + color);
+          break;
+        default:
+          document.write("Màu không hợp lệ!");
+      }
+      document.write("<hr/><br/>");
+
+      document.write("Bài 7:");
+      let x = prompt("Nhập số nguyên x:");
+      x = parseInt(x);
+
+      if (x === 0) {
+        document.write("x có giá trị là 0");
+      } else if (x > 0) {
+        document.write("x là số nguyên dương");
+      } else {
+        document.write("x là số nguyên âm");
+      }
+      document.write("<hr/><br/>");
+      document.write("Bài 8:");
+      let weight = +prompt("Nhập cân nặng(kg):");
+      let height = +prompt("Nhập chiều cao(m):");
+
+      let bmi = weight / (height ^ 2);
+      if (bmi < 18.5) {
+        document.write("Gầy");
+      } else if (bmi < 25.0) {
+        document.write("Bình thường");
+      } else if (bmi < 30.0) {
+        document.write("Thừa cân: Tiền béo phì");
+      } else if (bmi < 35.0) {
+        document.write("Thừa cân: Béo phì độ I");
+      } else if (bmi < 40.0) {
+        document.write("Thừa cân: Béo phì độ II");
+      } else {
+        document.write("Thừa cân: Béo phì độ III");
+      }
+      document.write("<hr/><br/>");
+      document.write("Bài 9:");
+
+      let toan = +prompt("Nhập điểm Toán:");
+      let ly = +prompt("Nhập điểm Lí:");
+      let hoa = +prompt("Nhập điểm Hoá:");
+      let van = +prompt("Nhập điểm Văn:");
+      let su = +prompt("Nhập điểm Sử:");
+      let dia = +prompt("Nhập điểm Địa:");
+
+      let avg = (toan + ly + hoa + van + su + dia) / 6;
+      let rank;
+
+      if (avg >= 8.0 && avg <= 10) {
+        rank = "GIỎI";
+      } else if (avg >= 6.5 && avg < 8.0) {
+        rank = "KHÁ";
+      } else if (avg >= 5.0 && avg < 6.5) {
+        rank = "TRUNG BÌNH";
+      } else {
+        rank = "YẾU";
+      }
+
+      document.write("Điểm trung bình: " + avg.toFixed(1) + "\nXếp loại: " + rank);
+
+      document.write("<hr/><br/>");
+      document.write("Bài 10:");
+
+      let month = prompt("Nhập tháng (1-12):");
+      let year = prompt("Nhập năm:");
+      let day;
+
+      switch (month) {
+        case "1":
+        case "3":
+        case "5":
+        case "7":
+        case "8":
+        case "10":
+        case "12":
+          day = 31;
+          break;
+        case "4":
+        case "6":
+        case "9":
+        case "11":
+          day = 30;
+          break;
+        case "2":
+          // Kiểm tra năm nhuận
+          if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+            day = 29;
+          } else {
+            day = 28;
+          }
+          break;
+        default:
+          document.write("Tháng không hợp lệ. Vui lòng nhập từ 1 đến 12.");
+          break;
+      }
+
+      if (day !== undefined) {
+        document.write("Tháng " + month + " năm " + year + " có " + day + " ngày.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getday() {
+        let month = prompt("Nhập tháng (1-12):");
+        let year = prompt("Nhập năm:");
+        let day;
+
+        switch (month) {
+          case "1":
+          case "3":
+          case "5":
+          case "7":
+          case "8":
+          case "10":
+          case "12":
+            day = 31;
+            break;
+          case "4":
+          case "6":
+          case "9":
+          case "11":
+            day = 30;
+            break;
+          case "2":
+            // Kiểm tra năm nhuận
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+              day = 29;
+            } else {
+              day = 28;
+            }
+            break;
+          default:
+            alert("Tháng không hợp lệ. Vui lòng nhập từ 1 đến 12.");
+            return;
+        }
+
+        alert("Tháng " + month + " năm " + year + " có " + day + " ngày.");
+      }
+
+      getday();
+    </script>
+  </body>
+</html>
